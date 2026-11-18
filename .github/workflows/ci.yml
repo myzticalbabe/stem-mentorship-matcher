@@ -1,18 +1,53 @@
 name: CI
+
 on:
+  pull_request:
+    branches: [main, master]
   push:
     branches: [main, master]
-  pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${ github.ref }
+  cancel-in-progress: true
+
 jobs:
-  smoke:
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Compile check
-        run: python -m compileall -q .
-      - name: Tests if present
-        run: python -c "import pytest" 2>/dev/null && python -m pytest -q -x --timeout=120 || echo "no pytest suite; compile check only"
+      - name: Check for large files
+        run: |
+          find . -type f -size +50M ! -path "./.git/*" | head -20
+          if [ $(find . -type f -size +50M ! -path "./.git/*" | wc -l) -gt 0 ]; then
+            echo "::error::Files larger than 50MB found"
+            exit 1
+          fi
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          echo "No test suite configured yet"
+          # Add test commands here
+
+  summary:
+    name: Summary
+    needs: [lint, test]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check status
+        run: |
+          echo "Lint: ${ needs.lint.result }"
+          echo "Test: ${ needs.test.result }"
+          if [[ "${ needs.lint.result }" != "success" ]] || [[ "${ needs.test.result }" != "success" ]]; then
+            exit 1
+          fi

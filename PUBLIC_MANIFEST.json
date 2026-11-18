@@ -1,0 +1,42 @@
+{
+  "name": "stem-mentorship-matcher",
+  "version": "1.0.0",
+  "description": "stem-mentorship-matcher repository",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myzticalbabe/stem-mentorship-matcher.git"
+  },
+  "homepage": "https://github.com/myzticalbabe/stem-mentorship-matcher",
+  "bugs": {
+    "url": "https://github.com/myzticalbabe/stem-mentorship-matcher/issues"
+  },
+  "license": "MIT",
+  "author": "stem-mentorship-matcher Contributors",
+  "maintainers": [
+    {
+      "name": "myzticalbabe",
+      "email": "maintainers@myzticalbabe.com",
+      "web": "https://github.com/myzticalbabe"
+    }
+  ],
+  "keywords": [
+    "stem",
+    "education",
+    "open-source"
+  ],
+  "categories": [
+    "education",
+    "stem"
+  ],
+  "support": {
+    "documentation": "https://github.com/myzticalbabe/stem-mentorship-matcher/wiki",
+    "discussions": "https://github.com/myzticalbabe/stem-mentorship-matcher/discussions",
+    "security": "https://github.com/myzticalbabe/stem-mentorship-matcher/security/advisories"
+  },
+  "governance": {
+    "code_of_conduct": "CODE_OF_CONDUCT.md",
+    "contributing": "CONTRIBUTING.md",
+    "security_policy": "SECURITY.md",
+    "disclosure_policy": "DISCLOSURE_POLICY.md"
+  }
+}
