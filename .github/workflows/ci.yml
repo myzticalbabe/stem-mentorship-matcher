@@ -46,8 +46,8 @@ jobs:
     steps:
       - name: Check status
         run: |
-          echo "Lint: ${ needs.lint.result }"
-          echo "Test: ${ needs.test.result }"
-          if [[ "${ needs.lint.result }" != "success" ]] || [[ "${ needs.test.result }" != "success" ]]; then
+          echo "Lint: ${{ needs.lint.result }}"
+          echo "Test: ${{ needs.test.result }}"
+          if [[ "${{ needs.lint.result }}" != "success" ]] || [[ "${{ needs.test.result }}" != "success" ]]; then
             exit 1
           fi
