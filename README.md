@@ -13,3 +13,5 @@ python -m mentorship_matcher.cli --mentors data/mentors.yaml --learners data/lea
 ```bash
 pytest
 ```
+
+SOUL LICENCE ONLY — see `LICENSE` (`LicenseRef-SoulForge-1.0`).
