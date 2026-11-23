@@ -1,0 +1,27 @@
+- name: Aisha Williams
+  role: learner
+  skills: [python, basics]
+  interests: [ai, data-science]
+  availability: weekends
+  experience_years: 0
+
+- name: Tomás García
+  role: learner
+  skills: [javascript, html, css]
+  interests: [web, accessibility]
+  availability: weekdays
+  experience_years: 1
+
+- name: Mei Lin
+  role: learner
+  skills: [python, statistics]
+  interests: [research, data-visualization]
+  availability: weekends
+  experience_years: 2
+
+- name: Kwame Asante
+  role: learner
+  skills: [java, basics]
+  interests: [algorithms, competitive-programming]
+  availability: evenings
+  experience_years: 0

@@ -1,0 +1,27 @@
+- name: Dr. Sarah Chen
+  role: mentor
+  skills: [python, machine-learning, data-science, mentoring]
+  interests: [ai, education, open-source]
+  availability: weekends
+  experience_years: 12
+
+- name: Marcus Johnson
+  role: mentor
+  skills: [javascript, react, web-development, accessibility]
+  interests: [web, inclusive-design, teaching]
+  availability: weekdays
+  experience_years: 7
+
+- name: Priya Patel
+  role: mentor
+  skills: [python, statistics, r, data-visualization]
+  interests: [research, data-science, mentoring]
+  availability: weekends
+  experience_years: 9
+
+- name: James Okafor
+  role: mentor
+  skills: [java, algorithms, system-design, mentoring]
+  interests: [competitive-programming, education]
+  availability: evenings
+  experience_years: 15
